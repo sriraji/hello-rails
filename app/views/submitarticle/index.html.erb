@@ -1,0 +1,57 @@
+<%= form_for :submitarticle do |f| %>
+<h1>
+Submit an article
+</h1>     
+<hr>
+    <h3>
+    <%= f.label :Type_of_the_article %>
+    <%= f.select :Reference_type, Submitarticle::Reference_type %>
+</h3>
+<body>
+<p>
+    <%= f.label :Title %><br>
+    <%= f.text_field :text %>
+</p>
+<p>
+    <%= f.label :Author %><br>
+    <%= f.text_field :text %>
+</p>
+<p>
+   <%= f.label :Publication_Year %><br>
+   <%= f.datetime_select :start_date, { :include_select => true, :discard_day => true, :discard_month => true, :discard_hour => true, :discard_second => true, :start_year => 1995 } %>
+</p>
+<p>
+    <%= f.label :Publisher %><br>
+    <%= f.text_field :text %>
+</p>    
+<p>
+    <%= f.label :Journal %><br>
+    <%= f.text_field :text %>
+</p>
+<p>
+    <%= f.label :Volume %><br>
+    <%= f.text_field :text %>
+</p>
+<p>
+    <%= f.label :Issue %><br>
+    <%= f.text_field :text %>
+</p>
+<p>
+    <%= f.label :Source_name %><br>
+    <%= f.text_field :text %>
+</p>
+<p>
+<%= f.label :Pages %><br>
+<%= f.text_field :number %>
+</p>    
+<p>
+    <%= f.label :DOI %><br>
+    <%= f.text_field :string %>
+</p>    
+<p>
+    </body>
+<%= f.submit :value  => "Save", :class => 'button' %>        
+</p>
+<%= link_to :"cancel",  :back %>
+<% end %>
+

@@ -1,0 +1,30 @@
+<%= form_for :register do |f| %>
+<h3>
+Create  new user
+</h3>     
+<hr>
+<p>
+      <%= f.label :Name %><br>
+<%= f.text_field :text %>
+</p>
+<p>
+    <%= f.label :Username %><br>
+    <%= f.text_field :text %><br>
+</p>
+<p>
+    <%= f.label :E_mail %><br>
+    <%= f.text_field :text %>
+</p>
+<p>
+    <%= f.label :Password %><br>
+    <%= f.text_field :password %>
+</p>
+<p>
+<%= f.label :confirm_password %><br>
+<%= f.text_field :confirm_password %>
+</p>    
+<p>
+<%= f.submit :value  => "Create", :class => 'button' %>        
+</p>
+<% end %>
+<%= link_to :"cancel",  :back %>
